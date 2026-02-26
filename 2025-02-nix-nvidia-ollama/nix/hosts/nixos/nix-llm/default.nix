@@ -19,18 +19,12 @@
     firewall.enable = false;
     hostName = "nix-llm";
     interfaces.ens18 = {
-      useDHCP = false;
-      ipv4.addresses = [{
-        address = "10.42.37.100";
-        prefixLength = 24;
-      }];
+      useDHCP = true;
     };
-    defaultGateway = "10.42.37.254";
-    nameservers = [ "10.42.37.254" ];
   };
 
   # System localization
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver = {
